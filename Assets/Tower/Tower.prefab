@@ -4931,4 +4931,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildDelay: 1
-  cost: 100
+  cost: 75

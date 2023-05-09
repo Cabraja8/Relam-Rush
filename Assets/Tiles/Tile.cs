@@ -29,26 +29,26 @@ public class Tile : MonoBehaviour
 
      void Start() {
 
-    for (int i = 0; i < 10; i++) {
+    // for (int i = 0; i < 10; i++) {
 
-    float x = UnityEngine.Random.Range(minX, maxX);
-    float y = 2.5f;
-    float z = UnityEngine.Random.Range(minZ, maxZ);
+    // float x = UnityEngine.Random.Range(minX, maxX);
+    // float y = 2.5f;
+    // float z = UnityEngine.Random.Range(minZ, maxZ);
 
-        x = Mathf.Round(x / 10f) * 10f;
-        z = Mathf.Round(z / 10f) * 10f;
+    //     x = Mathf.Round(x / 10f) * 10f;
+    //     z = Mathf.Round(z / 10f) * 10f;
 
-        pos= new Vector3(x, y, z);
-        if(gridManager != null) {
-          coordinates = gridManager.GetCoordinatesFromPosition(pos); 
+    //     pos= new Vector3(x, y, z);
+    //     if(gridManager != null) {
+    //       coordinates = gridManager.GetCoordinatesFromPosition(pos); 
 
-          if(!IsPlaceable){
-            gridManager.BlockNode(coordinates);
-          }
-        }
-       SpawnTowers();
+    //       if(!IsPlaceable){
+    //         gridManager.BlockNode(coordinates);
+    //       }
+    //     }
+    //    SpawnTowers();
             
-        }
+    //     }
     }
     
 
@@ -56,17 +56,17 @@ public class Tile : MonoBehaviour
 
 
      
-    public void SpawnTowers(){
+    // public void SpawnTowers(){
 
-            if(gridManager.GetNode(coordinates).isWalkable && !pathFinder.WillBlockpath(coordinates)){
-             bool isSuccessful = TowerPrefab.CreateTower(TowerPrefab,pos); 
+    //         if(gridManager.GetNode(coordinates).isWalkable && !pathFinder.WillBlockpath(coordinates)){
+    //          bool isSuccessful = TowerPrefab.CreateTower(TowerPrefab,pos); 
        
-             if(isSuccessful){
-               gridManager.BlockNode(coordinates);
-               pathFinder.NotifyReceiver();
-             }
-           }
-    }
+    //          if(isSuccessful){
+    //            gridManager.BlockNode(coordinates);
+    //            pathFinder.NotifyReceiver();
+    //          }
+    //        }
+    // }
       
       
           
